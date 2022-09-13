@@ -25,5 +25,10 @@ def seed_db():
     db.session.commit()
 
 
+@cli.command("clear_cache")
+def seed_db():
+    open('project/cache.json', 'w').close()
+
+
 if __name__ == "__main__":
     cli()
